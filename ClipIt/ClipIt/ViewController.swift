@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftLinkPreview
 
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -15,6 +16,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "ClipIt"
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(testAddUrl))
         // Do any additional setup after loading the view.
     }
@@ -36,12 +38,41 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
 //        Add constraints for the image here
         cell.renderImage.layer.borderWidth = 1
-        cell.renderImage.load(url: article.url)
+        
+        
+        pullPreview(url: article.url, cell: cell, index: indexPath)
+    
+        
         cell.layer.borderWidth = 1
         
         return cell
         
         
+    }
+    
+    func pullPreview(url: URL, cell: ArticleCell, index: IndexPath) {
+        let slp = SwiftLinkPreview()
+        
+//      Attempting to convert to string, knwoing that it might not go the immediately unwrapping it.
+        let stringUrl = url.absoluteString
+        print("\n\n New request attempt: with url \(stringUrl)")
+        slp.preview(
+            stringUrl,
+            onSuccess: { result in
+                print("\(result)")
+                guard let imgUrlString = result.image else {
+                    print ("image niled")
+                    return
+                }
+                guard let imageUrl = URL(string: imgUrlString) else {return}
+                cell.renderImage.load(url: imageUrl)
+            },
+            onError: { error in
+                print("\(error)")
+                print ("Preview pull failed!")
+                return
+            }
+        )
     }
     
     
@@ -79,7 +110,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width/3-10, height: 190)
+        return CGSize(width: collectionView.bounds.size.width/3-7, height: 190)
     }
     
 }

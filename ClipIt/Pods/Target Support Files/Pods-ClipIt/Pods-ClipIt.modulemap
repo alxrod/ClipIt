@@ -1,0 +1,6 @@
+framework module Pods_ClipIt {
+  umbrella header "Pods-ClipIt-umbrella.h"
+
+  export *
+  module * { export * }
+}
