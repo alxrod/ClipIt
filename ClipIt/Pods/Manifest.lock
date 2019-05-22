@@ -1,16 +1,24 @@
 PODS:
+  - Alamofire (5.0.0-beta.6)
   - SwiftLinkPreview (3.0.1)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
   - SwiftLinkPreview (~> 3.0.1)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - SwiftLinkPreview
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   SwiftLinkPreview: 7524438c43bf63a5041615713777c3d8f19a9a31
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 721ed20630f4c71457893de9834012b1d247ad89
+PODFILE CHECKSUM: edfb845c8dfbc70650105e0ac931921f5f21b470
 
 COCOAPODS: 1.6.2

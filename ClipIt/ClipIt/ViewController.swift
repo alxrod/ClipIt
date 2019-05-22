@@ -12,10 +12,13 @@ import SwiftLinkPreview
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var articles = [Article]()
+    
+    var token: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "ClipIt"
+        print("Loading mainpage for user with token \(token)")
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(testAddUrl))
         // Do any additional setup after loading the view.
@@ -80,9 +83,15 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     @objc func testAddUrl() {
         let ac = UIAlertController(title: "Test Add Website", message: nil, preferredStyle: .alert)
         
-        ac.addTextField()
-        ac.addTextField()
-        ac.addTextField()
+        ac.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "url"
+        })
+        ac.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "sender"
+        })
+        ac.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "title"
+        })
         ac.addAction(UIAlertAction(title: "Cancel",style: .cancel))
         
         ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in

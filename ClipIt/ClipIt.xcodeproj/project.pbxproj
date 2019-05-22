@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		793B4D1B86A6CBF258243A09 /* Pods_ClipIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585588FCA324C51CC1CB6DDA /* Pods_ClipIt.framework */; };
+		B44D40802295EBFE003A4178 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44D407F2295EBFE003A4178 /* NetworkingClient.swift */; };
 		B45822CF2291932000044C40 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45822CE2291932000044C40 /* ShareViewController.swift */; };
 		B45822D22291932000044C40 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45822D02291932000044C40 /* MainInterface.storyboard */; };
 		B45822D62291932000044C40 /* ClipItShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B45822CC2291932000044C40 /* ClipItShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B45822DE2295AB6400044C40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45822DD2295AB6400044C40 /* LoginViewController.swift */; };
+		B45822E02295B01200044C40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45822DF2295B01200044C40 /* User.swift */; };
 		B4C1ED61228F8CE7002C873F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1ED60228F8CE7002C873F /* AppDelegate.swift */; };
 		B4C1ED63228F8CE7002C873F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1ED62228F8CE7002C873F /* ViewController.swift */; };
 		B4C1ED66228F8CE7002C873F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1ED64228F8CE7002C873F /* Main.storyboard */; };
@@ -49,12 +52,15 @@
 		376FE81880FA9C0AA75F792B /* Pods-ClipIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipIt.release.xcconfig"; path = "Target Support Files/Pods-ClipIt/Pods-ClipIt.release.xcconfig"; sourceTree = "<group>"; };
 		585588FCA324C51CC1CB6DDA /* Pods_ClipIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB3AD3192D0102D4933202E /* Pods-ClipIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipIt.debug.xcconfig"; path = "Target Support Files/Pods-ClipIt/Pods-ClipIt.debug.xcconfig"; sourceTree = "<group>"; };
+		B44D407F2295EBFE003A4178 /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
 		B45822CC2291932000044C40 /* ClipItShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClipItShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45822CE2291932000044C40 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B45822D12291932000044C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B45822D32291932000044C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B45822DB2291954F00044C40 /* ClipIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipIt.entitlements; sourceTree = "<group>"; };
 		B45822DC2291959300044C40 /* ClipItShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipItShare.entitlements; sourceTree = "<group>"; };
+		B45822DD2295AB6400044C40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B45822DF2295B01200044C40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4C1ED5D228F8CE7002C873F /* ClipIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1ED60228F8CE7002C873F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C1ED62228F8CE7002C873F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 				B4C1ED7C228F9EB7002C873F /* CoverImageView.swift */,
 				B4C1ED7A228F933F002C873F /* Article.swift */,
 				B4C1ED64228F8CE7002C873F /* Main.storyboard */,
+				B45822DD2295AB6400044C40 /* LoginViewController.swift */,
+				B44D407F2295EBFE003A4178 /* NetworkingClient.swift */,
+				B45822DF2295B01200044C40 /* User.swift */,
 				B4C1ED67228F8CED002C873F /* Assets.xcassets */,
 				B4C1ED69228F8CED002C873F /* LaunchScreen.storyboard */,
 				B4C1ED6C228F8CED002C873F /* Info.plist */,
@@ -270,13 +279,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ClipIt/Pods-ClipIt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLinkPreview/SwiftLinkPreview.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLinkPreview.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -320,11 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44D40802295EBFE003A4178 /* NetworkingClient.swift in Sources */,
+				B45822DE2295AB6400044C40 /* LoginViewController.swift in Sources */,
 				B4C1ED7B228F933F002C873F /* Article.swift in Sources */,
 				B4C1ED63228F8CE7002C873F /* ViewController.swift in Sources */,
 				B4C1ED7D228F9EB7002C873F /* CoverImageView.swift in Sources */,
 				B4C1ED61228F8CE7002C873F /* AppDelegate.swift in Sources */,
 				B4C1ED79228F8FB3002C873F /* ArticleCell.swift in Sources */,
+				B45822E02295B01200044C40 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

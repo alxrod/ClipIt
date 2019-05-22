@@ -45,6 +45,11 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>127.0.0.1:5000</key>
+			<string></string>
+		</dict>
 	</dict>
 </dict>
 </plist>
