@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		793B4D1B86A6CBF258243A09 /* Pods_ClipIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585588FCA324C51CC1CB6DDA /* Pods_ClipIt.framework */; };
+		B45822CF2291932000044C40 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45822CE2291932000044C40 /* ShareViewController.swift */; };
+		B45822D22291932000044C40 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45822D02291932000044C40 /* MainInterface.storyboard */; };
+		B45822D62291932000044C40 /* ClipItShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B45822CC2291932000044C40 /* ClipItShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B4C1ED61228F8CE7002C873F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1ED60228F8CE7002C873F /* AppDelegate.swift */; };
 		B4C1ED63228F8CE7002C873F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1ED62228F8CE7002C873F /* ViewController.swift */; };
 		B4C1ED66228F8CE7002C873F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1ED64228F8CE7002C873F /* Main.storyboard */; };
@@ -18,10 +21,40 @@
 		B4C1ED7D228F9EB7002C873F /* CoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1ED7C228F9EB7002C873F /* CoverImageView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B45822D42291932000044C40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4C1ED55228F8CE7002C873F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45822CB2291932000044C40;
+			remoteInfo = ClipItShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B45822DA2291932000044C40 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B45822D62291932000044C40 /* ClipItShare.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		376FE81880FA9C0AA75F792B /* Pods-ClipIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipIt.release.xcconfig"; path = "Target Support Files/Pods-ClipIt/Pods-ClipIt.release.xcconfig"; sourceTree = "<group>"; };
 		585588FCA324C51CC1CB6DDA /* Pods_ClipIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB3AD3192D0102D4933202E /* Pods-ClipIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipIt.debug.xcconfig"; path = "Target Support Files/Pods-ClipIt/Pods-ClipIt.debug.xcconfig"; sourceTree = "<group>"; };
+		B45822CC2291932000044C40 /* ClipItShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClipItShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45822CE2291932000044C40 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B45822D12291932000044C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B45822D32291932000044C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B45822DB2291954F00044C40 /* ClipIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipIt.entitlements; sourceTree = "<group>"; };
+		B45822DC2291959300044C40 /* ClipItShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipItShare.entitlements; sourceTree = "<group>"; };
 		B4C1ED5D228F8CE7002C873F /* ClipIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1ED60228F8CE7002C873F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C1ED62228F8CE7002C873F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B45822C92291932000044C40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4C1ED5A228F8CE7002C873F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,14 +92,25 @@
 				9AB3AD3192D0102D4933202E /* Pods-ClipIt.debug.xcconfig */,
 				376FE81880FA9C0AA75F792B /* Pods-ClipIt.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B45822CD2291932000044C40 /* ClipItShare */ = {
+			isa = PBXGroup;
+			children = (
+				B45822DC2291959300044C40 /* ClipItShare.entitlements */,
+				B45822CE2291932000044C40 /* ShareViewController.swift */,
+				B45822D02291932000044C40 /* MainInterface.storyboard */,
+				B45822D32291932000044C40 /* Info.plist */,
+			);
+			path = ClipItShare;
 			sourceTree = "<group>";
 		};
 		B4C1ED54228F8CE7002C873F = {
 			isa = PBXGroup;
 			children = (
 				B4C1ED5F228F8CE7002C873F /* ClipIt */,
+				B45822CD2291932000044C40 /* ClipItShare */,
 				B4C1ED5E228F8CE7002C873F /* Products */,
 				39170CC60F5B7B1F3C582524 /* Pods */,
 				D1974293EE43686A2E77D426 /* Frameworks */,
@@ -70,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C1ED5D228F8CE7002C873F /* ClipIt.app */,
+				B45822CC2291932000044C40 /* ClipItShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +129,7 @@
 		B4C1ED5F228F8CE7002C873F /* ClipIt */ = {
 			isa = PBXGroup;
 			children = (
+				B45822DB2291954F00044C40 /* ClipIt.entitlements */,
 				B4C1ED78228F8FB3002C873F /* ArticleCell.swift */,
 				B4C1ED60228F8CE7002C873F /* AppDelegate.swift */,
 				B4C1ED62228F8CE7002C873F /* ViewController.swift */,
@@ -101,6 +154,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B45822CB2291932000044C40 /* ClipItShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45822D92291932000044C40 /* Build configuration list for PBXNativeTarget "ClipItShare" */;
+			buildPhases = (
+				B45822C82291932000044C40 /* Sources */,
+				B45822C92291932000044C40 /* Frameworks */,
+				B45822CA2291932000044C40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClipItShare;
+			productName = ClipItShare;
+			productReference = B45822CC2291932000044C40 /* ClipItShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B4C1ED5C228F8CE7002C873F /* ClipIt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4C1ED6F228F8CED002C873F /* Build configuration list for PBXNativeTarget "ClipIt" */;
@@ -110,10 +180,12 @@
 				B4C1ED5A228F8CE7002C873F /* Frameworks */,
 				B4C1ED5B228F8CE7002C873F /* Resources */,
 				1D02AB31E84B48B27039D628 /* [CP] Embed Pods Frameworks */,
+				B45822DA2291932000044C40 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B45822D52291932000044C40 /* PBXTargetDependency */,
 			);
 			name = ClipIt;
 			productName = ClipIt;
@@ -130,8 +202,21 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Alex Rodriguez";
 				TargetAttributes = {
+					B45822CB2291932000044C40 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					B4C1ED5C228F8CE7002C873F = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -149,11 +234,20 @@
 			projectRoot = "";
 			targets = (
 				B4C1ED5C228F8CE7002C873F /* ClipIt */,
+				B45822CB2291932000044C40 /* ClipItShare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B45822CA2291932000044C40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45822D22291932000044C40 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4C1ED5B228F8CE7002C873F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +308,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B45822C82291932000044C40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45822CF2291932000044C40 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4C1ED59228F8CE7002C873F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,7 +330,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B45822D52291932000044C40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45822CB2291932000044C40 /* ClipItShare */;
+			targetProxy = B45822D42291932000044C40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		B45822D02291932000044C40 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B45822D12291932000044C40 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		B4C1ED64228F8CE7002C873F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -248,6 +366,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B45822D72291932000044C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClipItShare/ClipItShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8JRLHA5P5;
+				INFOPLIST_FILE = ClipItShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zack-alex.ClipIt.ClipItShare";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B45822D82291932000044C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClipItShare/ClipItShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8JRLHA5P5;
+				INFOPLIST_FILE = ClipItShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zack-alex.ClipIt.ClipItShare";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B4C1ED6D228F8CED002C873F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,7 +526,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9AB3AD3192D0102D4933202E /* Pods-ClipIt.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClipIt/ClipIt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8JRLHA5P5;
 				INFOPLIST_FILE = ClipIt/Info.plist;
@@ -387,7 +547,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 376FE81880FA9C0AA75F792B /* Pods-ClipIt.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClipIt/ClipIt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8JRLHA5P5;
 				INFOPLIST_FILE = ClipIt/Info.plist;
@@ -405,6 +567,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B45822D92291932000044C40 /* Build configuration list for PBXNativeTarget "ClipItShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45822D72291932000044C40 /* Debug */,
+				B45822D82291932000044C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B4C1ED58228F8CE7002C873F /* Build configuration list for PBXProject "ClipIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
