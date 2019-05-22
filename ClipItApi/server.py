@@ -81,6 +81,7 @@ def insert_article():
 	return json.dumps("Insert Article")
 
 
+
 # Eventually I should really add some encryption here:
 @app.route("/auth/", methods=["POST", "GET"])
 def authenticate():
@@ -91,7 +92,15 @@ def authenticate():
 		if user:
 			if password == user.password:
 				print "Validated"
-				user.auth_token = str(uuid.uuid1())
+				dupToken = False
+				tempToken = str(uuid.uuid1())
+				dubUsers = User.query.filter_by(auth_token=tempToken).all()
+
+				while len(dubUsers) != 0:
+					tempToken = str(uuid.uuid1())
+					dubUsers = User.query.filter_by(auth_token=tempToken).all()
+
+				user.auth_token = tempToken
 				db.session.commit()
 				return json.dumps(user.auth_token)
 
